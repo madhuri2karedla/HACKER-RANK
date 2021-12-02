@@ -21,9 +21,6 @@ def flippingBits(n):
     s = (32-len(s))*"1"+s
     return int(s,2)
 
-'''for _ in range(int(input())):
-    print(flippingBits(int(input())))'''
-
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
