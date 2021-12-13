@@ -1,0 +1,38 @@
+#!/bin/python
+
+import math
+import os
+import random
+import re
+import sys
+
+
+#
+# Complete the 'flippingMatrix' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts 2D_INTEGER_ARRAY matrix as parameter.
+#
+
+def flippingMatrix(matrix):
+    # Write your code here
+    m1 = []
+    m2 = []
+    m3 = []
+    m4 = []
+    for i in xrange(n):
+        m1 += [matrix[i][:n]]
+        m2 += [matrix[i][n:][::-1]]
+    for i in xrange(n, 2*n):
+        m3 += [matrix[i][:n]]
+        m4 += [matrix[i][n:][::-1]]
+    m3 = m3[::-1]
+    m4 = m4[::-1]
+    res = 0
+    #res = [[0 for j in xrange(n)] for i in xrange(n)]
+    for i in xrange(n):
+        for j in xrange(n):
+            #res[i][j] = max(m1[i][j], m2[i][j], m3[i][j], m4[i][j])
+            res += max(m1[i][j], m2[i][j], m3[i][j], m4[i][j])
+    return res
+if __name__ == '__main__':
